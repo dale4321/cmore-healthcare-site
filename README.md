@@ -36,7 +36,7 @@
                     class="h-40 w-auto rounded-md shadow-inner" 
                     onerror="this.onerror=null; this.src='https://placehold.co/80x40/003366/FFFFFF?text=Logo';"
                 >
-                <h1 class="text-4xl md:text-4xl font-extrabold text-blue-900 text-center">
+                <h1 class="text-5xl md:text-5xl font-extrabold text-blue-900 text-center">
                     Cmore Healthcare
                 </h1>
             </div>
