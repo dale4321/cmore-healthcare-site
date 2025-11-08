@@ -31,7 +31,7 @@
                 <!-- LOGO IMAGE PLACEMENT -->
                 <!-- Replace the 'src' value below with the URL of your actual logo image -->
                 <img 
-                    src="https://placehold.co/80x40/003366/FFFFFF?text=Logo" 
+                    src=cmore_logo image.jpg
                     alt="Cmore Healthcare Logo" 
                     class="h-10 w-auto rounded-md shadow-inner" 
                     onerror="this.onerror=null; this.src='https://placehold.co/80x40/003366/FFFFFF?text=Logo';"
