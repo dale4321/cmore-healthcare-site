@@ -26,10 +26,20 @@
             <!-- Left: Caduceus Symbol -->
             <div class="text-blue-900 text-4xl mr-4">&#9764;</div>
 
-            <!-- Center: Logo/Heading -->
-            <h1 class="text-5xl md:text-5xl font-extrabold text-blue-900 text-center mb-4 md:mb-0">
-                Cmore Healthcare
-            </h1>
+            <!-- Center: Logo/Heading - UPDATED TO INCLUDE LOGO IMAGE -->
+            <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <!-- LOGO IMAGE PLACEMENT -->
+                <!-- Replace the 'src' value below with the URL of your actual logo image -->
+                <img 
+                    src="https://placehold.co/80x40/003366/FFFFFF?text=Logo" 
+                    alt="Cmore Healthcare Logo" 
+                    class="h-10 w-auto rounded-md shadow-inner" 
+                    onerror="this.onerror=null; this.src='https://placehold.co/80x40/003366/FFFFFF?text=Logo';"
+                >
+                <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 text-center">
+                    Cmore Healthcare
+                </h1>
+            </div>
 
             <!-- Right: Placeholder for Logo Image (optional) -->
             <div class="hidden md:block w-10"></div>
