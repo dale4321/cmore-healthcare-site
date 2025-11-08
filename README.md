@@ -27,7 +27,7 @@
             <div class="text-blue-900 text-4xl mr-4">&#9764;</div>
 
             <!-- Center: Logo/Heading -->
-            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 text-center mb-4 md:mb-0">
+            <h1 class="text-5xl md:text-5xl font-extrabold text-blue-900 text-center mb-4 md:mb-0">
                 Cmore Healthcare
             </h1>
 
