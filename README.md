@@ -25,7 +25,7 @@
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
             
             <!-- Left: Asclepius Symbol -->
-            <div class="text-blue-900 text-6xl mr-6">&#9764;</div>
+            <div class="text-blue-900 text-4xl mr-4">&#9764;</div>
 
             <!-- Center: Logo/Heading - STACKED VERTICALLY -->
             <div class="flex flex-col items-center space-y-2 mb-4 md:mb-0">
@@ -33,7 +33,7 @@
                 <img 
                     src="cmore_logo image.jpg" 
                     alt="Cmore Healthcare Logo" 
-                    class="h-60 w-auto rounded-md shadow-inner" 
+                    class="h-10 w-auto rounded-md shadow-inner" 
                     onerror="this.onerror=null; this.src='https://placehold.co/80x40/003366/FFFFFF?text=Logo';"
                 >
                 <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 text-center">
@@ -47,7 +47,7 @@
                 <img 
                     src="cmore_website photo .png" 
                     alt="African American Doctor treating elderly patient" 
-                    class="h-20 w-20 rounded-full shadow-lg"
+                    class="h-22 w-22 rounded-full shadow-lg"
                     onerror="this.onerror=null; this.src='https://placehold.co/40x40/CCCCCC/333333?text=Photo';"
                 >
             </div>
@@ -62,7 +62,8 @@
                 Cmore Healthcare provides integrated medical, consulting, and contracting services. We are dedicated to providing accessible, high-quality care to our patients whether in the office, via Zoom, or through in-home visits.
             </p>
             <div class="mt-8">
-                <div class="inline-block bg-blue-50 border border-blue-300 p-6 rounded-xl shadow-md transition transform hover:scale-[1.02] duration-300">
+                <!-- THIS DIV IS NOW LIGHT GREEN -->
+                <div class="inline-block bg-green-50 border border-green-300 p-6 rounded-xl shadow-md transition transform hover:scale-[1.02] duration-300">
                     <h3 class="text-xl font-bold text-blue-900">Patient Services Overview</h3>
                     <p class="text-sm text-gray-600 mt-1">Click below to explore our full range of medical programs and specialties.</p>
                 </div>
@@ -81,29 +82,29 @@
             <!-- Grid for the 8 Service Links -->
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                 
-                <!-- Link Box Structure (Dark Blue Text, Green Background) -->
-                <a href="#" class="block p-4 rounded-xl shadow-md border border-blue-200 bg-blue-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                <!-- Link Box Structure (Dark Blue Text, Light Green Background) -->
+                <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                     <span class="text-lg font-semibold text-blue-900">Family Care</span>
                 </a>
-                <a href="#" class="block p-4 rounded-xl shadow-md border border-blue-200 bg-blue-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                     <span class="text-lg font-semibold text-blue-900">Opioid Dependence</span>
                 </a>
-                <a href="#" class="block p-4 rounded-xl shadow-md border border-blue-200 bg-blue-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                     <span class="text-lg font-semibold text-blue-900">Immigration Physicals</span>
                 </a>
-                <a href="#" class="block p-4 rounded-xl shadow-md border border-blue-200 bg-blue-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                     <span class="text-lg font-semibold text-blue-900">Weight Loss</span>
                 </a>
-                <a href="#" class="block p-4 rounded-xl shadow-md border border-blue-200 bg-blue-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                     <span class="text-lg font-semibold text-blue-900">VA Disability assistance</span>
                 </a>
-                <a href="#" class="block p-4 rounded-xl shadow-md border border-blue-200 bg-blue-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                     <span class="text-lg font-semibold text-blue-900">Patient Pay portal</span>
                 </a>
-                <a href="#" class="block p-4 rounded-xl shadow-md border border-blue-200 bg-blue-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                     <span class="text-lg font-semibold text-blue-900">About Cmore Healthcare</span>
                 </a>
-                <a href="#" class="block p-4 rounded-xl shadow-md border border-blue-200 bg-blue-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                     <span class="text-lg font-semibold text-blue-900">Scheduling</span>
                 </a>
             </div>
