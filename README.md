@@ -47,7 +47,7 @@
                 <img 
                     src="cmore_website photo .png" 
                     alt="African American Doctor treating elderly patient" 
-                    class="h-25 w-25 rounded-full shadow-lg"
+                    class="h-20 w-20 rounded-full shadow-lg"
                     onerror="this.onerror=null; this.src='https://placehold.co/40x40/CCCCCC/333333?text=Photo';"
                 >
             </div>
