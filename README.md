@@ -27,7 +27,7 @@
                 <img 
                     src="cmore_logo image.jpg"
                     alt="Cmore Healthcare Logo" 
-                    class="h-70 w-auto rounded-md shadow-inner" 
+                    class="h-60 w-auto rounded-md shadow-inner" 
                     onerror="this.onerror=null; this.src='https://placehold.co/80x40/003366/FFFFFF?text=Logo';"
                 >
                 <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 text-center">
