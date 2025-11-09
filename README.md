@@ -25,7 +25,7 @@
 
             <div class="flex flex-col items-center space-y-2 mb-4 md:mb-0">
                 <img 
-                    src="https://placehold.co/80x40/003366/FFFFFF?text=Logo" 
+                    src="cmore_logo image.jpg"
                     alt="Cmore Healthcare Logo" 
                     class="h-10 w-auto rounded-md shadow-inner" 
                     onerror="this.onerror=null; this.src='https://placehold.co/80x40/003366/FFFFFF?text=Logo';"
@@ -38,7 +38,7 @@
             <div class="hidden md:block">
                 <img 
                     src="https://placehold.co/40x40/CCCCCC/333333?text=Photo" 
-                    alt="Staff/Building Photo" 
+                    alt="cmore_website photo.png" 
                     class="h-10 w-10 rounded-full shadow-lg"
                     onerror="this.onerror=null; this.src='https://placehold.co/40x40/CCCCCC/333333?text=Photo';"
                 >
