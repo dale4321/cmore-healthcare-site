@@ -25,7 +25,7 @@
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
             
             <!-- Left: Asclepius Symbol -->
-            <div class="text-blue-900 text-4xl mr-4">&#9764;</div>
+            <div class="text-blue-900 text-5xl mr-5">&#9764;</div>
 
             <!-- Center: Logo/Heading - STACKED VERTICALLY -->
             <div class="flex flex-col items-center space-y-2 mb-4 md:mb-0">
@@ -47,7 +47,7 @@
                 <img 
                     src="cmore_website photo .png" 
                     alt="African American Doctor treating elderly patient" 
-                    class="h-22 w-22 rounded-full shadow-lg"
+                    class="h-20 w-20 rounded-full shadow-lg"
                     onerror="this.onerror=null; this.src='https://placehold.co/40x40/CCCCCC/333333?text=Photo';"
                 >
             </div>
