@@ -47,7 +47,7 @@
                 <img 
                     src="cmore_website photo .png" 
                     alt="African American Doctor treating elderly patient" 
-                    class="h-20 w-20 rounded-full shadow-lg"
+                    class="h-30 w-30 rounded-full shadow-lg"
                     onerror="this.onerror=null; this.src='https://placehold.co/40x40/CCCCCC/333333?text=Photo';"
                 >
             </div>
@@ -81,7 +81,7 @@
             <!-- Grid for the 8 Service Links -->
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                 
-                <!-- Link Box Structure (Dark Blue Text, Light Blue Background) -->
+                <!-- Link Box Structure (Dark Blue Text, Light Green Background) -->
                 <a href="#" class="block p-4 rounded-xl shadow-md border border-blue-200 bg-blue-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                     <span class="text-lg font-semibold text-blue-900">Family Care</span>
                 </a>
