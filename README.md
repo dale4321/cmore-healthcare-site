@@ -6,6 +6,8 @@
     <title>Cmore Healthcare</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDfJ+cE9H+K48Jb0B+K82w8ZfJ8z/7d9B6u6+K80B1Z+z6lY8P3d2A/K5u8j8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
@@ -28,6 +30,19 @@
         /* Hide all pages by default, JavaScript handles showing the active one */
         .page-content {
             display: none;
+        }
+        .icon-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
         }
     </style>
 </head>
@@ -67,11 +82,10 @@
                     </div>
                 </div>
 
-                <!-- Navigation Links (NEW: Added to manage pages) -->
+                <!-- Navigation Links (Data-page links trigger JS navigation) -->
                 <nav class="flex space-x-8 mt-4 border-t border-gray-100 pt-3">
                     <a href="#" data-page="home" class="nav-link text-gray-700 hover:text-blue-600 p-2 transition duration-150">Home</a>
                     <a href="#" data-page="contact" class="nav-link text-gray-700 hover:text-blue-600 p-2 transition duration-150">Contact Us</a>
-                    <!-- You can add more links here (e.g., data-page="services") -->
                 </nav>
             </div>
         </header>
@@ -79,7 +93,7 @@
         <!-- Main Content Area -->
         <main class="container mx-auto p-4 md:p-6 lg:p-8 flex-grow">
             
-            <!-- 1. HOME Page Content (Your original content) -->
+            <!-- 1. HOME Page Content -->
             <section id="page-home" class="page-content bg-white p-8 md:p-12 rounded-xl shadow-lg border border-blue-200">
                 <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-blue-800 text-center">Welcome to Comprehensive Care</h2>
                 <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center">
@@ -93,7 +107,7 @@
                 </div>
             </section>
             
-            <!-- 2. CONTACT Page Content (The requested section) -->
+            <!-- 2. CONTACT Page Content -->
             <section id="page-contact" class="page-content bg-white p-6 rounded-xl shadow-lg border border-blue-200">
                 <h2 class="text-4xl font-black text-gray-900 mb-6 border-b-4 border-blue-100 pb-3">
                     Contact Our Family Care Team
@@ -131,9 +145,67 @@
                     </div>
                 </div>
             </section>
-            
-            <!-- Additional Content Sections (Footer Boxes moved to footer) -->
 
+            <!-- 3. UNDER CONSTRUCTION Page Content -->
+            <section id="page-under-construction" class="page-content text-center bg-white p-8 md:p-12 rounded-xl shadow-lg border border-yellow-300">
+                <div class="text-7xl text-yellow-600 mb-6 icon-pulse">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h2 class="text-4xl font-black text-gray-900 mb-4">
+                    Under Construction
+                </h2>
+                <p class="text-xl text-gray-700 max-w-2xl mx-auto mb-8">
+                    We are currently building these pages to ensure they meet our high standards for patient information. Thank you for your patience!
+                </p>
+
+                <!-- List of pages being constructed -->
+                <div class="max-w-md mx-auto mb-8 p-6 bg-yellow-50 border border-yellow-200 rounded-lg shadow-inner">
+                    <h3 class="text-2xl font-semibold text-yellow-800 mb-4 border-b pb-2 border-yellow-300">
+                        Pages We Are Updating:
+                    </h3>
+                    <ul class="text-lg text-gray-700 space-y-3 text-left list-none pl-0">
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-screwdriver-wrench text-yellow-600 mr-3"></i> 
+                            Weight Loss Program
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-screwdriver-wrench text-yellow-600 mr-3"></i> 
+                            Patient Pay Portal
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-screwdriver-wrench text-yellow-600 mr-3"></i> 
+                            About Cmore Healthcare
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-screwdriver-wrench text-yellow-600 mr-3"></i> 
+                            Scheduling Information
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Medical Graphics Grid -->
+                <div class="grid grid-cols-3 gap-6 max-w-xl mx-auto text-blue-700">
+                    <div class="flex flex-col items-center">
+                        <i class="fa-solid fa-notes-medical text-5xl mb-2"></i>
+                        <span class="text-sm text-gray-600">Records Ready</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fa-solid fa-stethoscope text-5xl mb-2"></i>
+                        <span class="text-sm text-gray-600">Care Focus</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fa-solid fa-heart-pulse text-5xl mb-2"></i>
+                        <span class="text-sm text-gray-600">Vitality</span>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <a href="#" data-page="home" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+                        Return to Home Page
+                    </a>
+                </div>
+            </section>
+            
         </main>
 
         <!-- Footer Navigation Section (Styled as Boxes) -->
@@ -143,29 +215,31 @@
                 
                 <!-- Grid for the 8 Service Links -->
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                    <!-- Link Box Structure (Dark Blue Text, Light Green Background) -->
-                    <a href="family-medicine.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                    <!-- Complete Pages (or pages assumed to be functional) -->
+                    <a href="#" data-page="under-construction" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">Family Care</span>
                     </a>
-                    <a href="opioid-dependence.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                    <a href="#" data-page="under-construction" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">Opioid Dependence</span>
                     </a>
-                    <a href="immigration-physical.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                    <a href="#" data-page="under-construction" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">Immigration Physicals</span>
                     </a>
-                    <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                    
+                    <!-- *** FIXED: These links now use data-page="under-construction" and yellow styling *** -->
+                    <a href="#" data-page="under-construction" class="block p-4 rounded-xl shadow-md border border-yellow-200 bg-yellow-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">Weight Loss</span>
                     </a>
-                    <a href="veterans-disability.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                    <a href="#" data-page="under-construction" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">VA Disability assistance</span>
                     </a>
-                    <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                    <a href="#" data-page="under-construction" class="block p-4 rounded-xl shadow-md border border-yellow-200 bg-yellow-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">Patient Pay portal</span>
                     </a>
-                    <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                    <a href="#" data-page="under-construction" class="block p-4 rounded-xl shadow-md border border-yellow-200 bg-yellow-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">About Cmore Healthcare</span>
                     </a>
-                    <a href="#" data-page="under-construction" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                    <a href="#" data-page="under-construction" class="block p-4 rounded-xl shadow-md border border-yellow-200 bg-yellow-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">Scheduling</span>
                     </a>
                 </div>
@@ -179,6 +253,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navLinks = document.querySelectorAll('.nav-link');
+            // Select both main nav links AND footer links that have the data-page attribute
+            const footerLinks = document.querySelectorAll('footer a[data-page]');
             const contentSections = document.querySelectorAll('.page-content');
 
             // Function to handle showing the correct page
@@ -203,11 +279,22 @@
                 });
             }
 
-            // Add click listeners to navigation links
+            // Add click listeners to main navigation links
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault(); 
                     const pageId = e.target.getAttribute('data-page');
+                    if (pageId) {
+                        showPage(pageId);
+                    }
+                });
+            });
+
+            // Add click listeners to all data-page links in the footer (NEW/RECONFIRMED)
+            footerLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); 
+                    const pageId = e.currentTarget.getAttribute('data-page'); 
                     if (pageId) {
                         showPage(pageId);
                     }
@@ -220,3 +307,4 @@
     </script>
 </body>
 </html>
+
