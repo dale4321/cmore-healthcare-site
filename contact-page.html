@@ -1,0 +1,90 @@
+ <!-- 2. Contact Page Content (Slightly enhanced) -->
+            <section id="page-contact" class="page-content">
+                <h2 class="text-4xl font-black text-gray-900 mb-6 border-b-4 border-blue-100 pb-3">
+                    Contact Our Family Care Team
+                </h2>
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-600">
+                        We are here to support your family's health journey. Please use the information below to reach out.
+                    </p>
+                    
+                    <!-- Contact Details -->
+                    <div class="grid md:grid-cols-2 gap-6 p-4 bg-gray-50 rounded-lg shadow-inner">
+                        <div class="space-y-2">
+                            <h3 class="font-bold text-xl text-blue-700">Phone & Appointments</h3>
+                            <p class="text-gray-700">
+                                <span class="font-semibold">Main Office:</span> <a href="tel:+1-425-347-3689" class="text-blue-600 hover:text-blue-800 underline block">(425) 347-3689</a>
+                                <span class="text-sm text-gray-500 block">Call during business hours for appointments.</span>
+                            </p>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="font-bold text-xl text-blue-700">Email Inquiry</h3>
+                            <p class="text-gray-700">
+                                <span class="font-semibold">General Inquiries:</span> <a href="mailto:cmorehealthcare@hotmail.com" class="text-blue-600 hover:text-blue-800 underline block">cmorehealthcare@hotmail.com</a>
+                                <span class="text-sm text-gray-500 block">Please do not send urgent medical questions via email.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Location Mockup -->
+                    <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="font-bold text-xl text-blue-700 mb-2">Clinic Location</h3>
+                        <p class="text-gray-700">12822 SE 32nd St Suite: 216 Bellevue Wa. 98005</p>
+                        <p class="text-sm text-gray-500 mt-1">We are located conveniently near down town.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-blue-700 text-blue-200 p-4 text-center text-sm">
+            &copy; 2024 Cmore Healthcare. Dedicated to compassionate family care.
+        </footer>
+    </div>
+
+    <!-- JavaScript for Page Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.page-content');
+
+            // Function to handle showing the correct page
+            function showPage(pageId) {
+                // 1. Hide all content sections
+                contentSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                // 2. Show the requested content section
+                const targetSection = document.getElementById(`page-${pageId}`);
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                }
+
+                // 3. Update active link class
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-page') === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Add click listeners to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Prevent default link behavior if it's not a real anchor link
+                    e.preventDefault(); 
+                    const pageId = e.target.getAttribute('data-page');
+                    if (pageId) {
+                        showPage(pageId);
+                    }
+                });
+            });
+
+            // Set the default page to 'home' on initial load
+            showPage('home');
+        });
+    </script>
+</body>
+</html>
