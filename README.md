@@ -83,7 +83,7 @@
             <section id="page-home" class="page-content bg-white p-8 md:p-12 rounded-xl shadow-lg border border-blue-200">
                 <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-blue-800 text-center">Welcome to Comprehensive Care</h2>
                 <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center">
-                    Cmore Healthcare provides integrated medical, consulting, and contracting services. We are dedicated to providing accessible, high-quality care to our patients whether in the office, via Zoom, or through in-home visits.
+                    Cmore Healthcare is dedicated to providing accessible, high-quality care to our patients whether in the office, via Zoom, or through in-home visits.
                 </p>
                 <div class="mt-8 text-center">
                     <div class="inline-block bg-green-50 border border-green-300 p-6 rounded-xl shadow-md transition transform hover:scale-[1.02] duration-300">
