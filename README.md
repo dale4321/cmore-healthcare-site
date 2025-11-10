@@ -83,7 +83,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                 
                 <!-- Link Box Structure (Dark Blue Text, Light Green Background) -->
-                <a href="family-medicine.html">
+                <a href="family-medicine.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                     <span class="text-lg font-semibold text-blue-900">Family Care</span>
                 </a>
                 <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
