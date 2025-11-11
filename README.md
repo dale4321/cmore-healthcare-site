@@ -64,7 +64,7 @@
                         2. ALT Attribute: This is the text you were seeing. I've updated it.
                     -->
                     <img 
-                        src="uploaded:image_15f626.png-8a0cadcb-b528-410d-a50d-44d076dcfdc8" 
+                        src="cmore_logo image.jpg" 
                         alt="Cmore Healthcare Logo" 
                         class="absolute z-0 opacity-40" 
                         style="width: 80px; height: 80px; top: 50%; left: 50%; transform: translate(-50%, -50%);" 
