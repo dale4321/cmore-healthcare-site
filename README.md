@@ -44,7 +44,7 @@
             background-color: #ffffff; 
             
             /* Only the logo image remains - no overlay */
-            background-image: url('cmore_logo image.jpg'); 
+            background-image: url('uploaded:image_15f626.png-8a0cadcb-b528-410d-a50d-44d076dcfdc8'); 
             
             background-repeat: no-repeat;
             
