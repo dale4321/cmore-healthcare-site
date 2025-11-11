@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,20 +38,20 @@
             display: none; 
         }
 
-        /* NEW: Header background style with logo watermark (Adjusted for visibility) */
+        /* NEW: Header background style with logo watermark (Adjusted for MAX visibility) */
         .header-watermark {
-            /* Base color */
-            background-color: #fff; 
+            /* Set a faint blue base color for better contrast against a white logo */
+            background-color: #f0f8ff; 
             
-            /* Define the layered background: White overlay (55% opaque) then the logo */
+            /* Define the layered background: Very transparent white overlay (20% opaque) then the logo */
             background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+                linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
                 url('uploaded:image_15f626.png-8a0cadcb-b528-410d-a50d-44d076dcfdc8'); 
             
             background-repeat: no-repeat;
             background-position: center;
-            /* Ensures it covers the entire header area completely */
-            background-size: cover; 
+            /* Changed to 'contain' to ensure the entire logo shape is visible without cropping */
+            background-size: contain; 
         }
     </style>
 </head>
