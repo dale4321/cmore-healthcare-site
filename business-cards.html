@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cmore Healthcare Print Sheet (10 Cards)</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        /* Default screen styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        /* The simulated page container */
+        .print-page {
+            width: 816px;   /* 8.5 inches at 96 DPI */
+            height: 1056px; /* 11 inches at 96 DPI */
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 1rem; /* Visual padding for screen view */
+        }
+
+        .card-container {
+            display: grid;
+            /* 2 columns, each 3.5 inches wide */
+            grid-template-columns: repeat(2, 3.5in);
+            /* 5 rows, each 2 inches high */
+            grid-template-rows: repeat(5, 2in);
+            
+            /* Center the 7in x 10in block on the 8.5in x 11in page */
+            justify-content: center;
+            align-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .business-card {
+            width: 3.5in;
+            height: 2in;
+            border: 1px dashed #ccc; /* Shows cut lines on screen and print */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #ffffff;
+        }
+        
+        /* Inner content styling adjustments for smaller card size */
+        .card-content-text {
+            /* General text size for the card content */
+            font-size: 0.65rem; 
+        }
+
+        /* --- PRINT STYLES --- */
+        @media print {
+            body {
+                background: none;
+                margin: 0;
+                padding: 0;
+                width: 8.5in;
+                height: 11in;
+            }
+
+            .print-page {
+                box-shadow: none;
+                width: 8.5in;
+                height: 11in;
+                padding: 0;
+            }
+            
+            .card-container {
+                /* Ensures 7in x 10in block is perfectly centered on 8.5in x 11in page */
+                height: 100%; 
+                width: 100%;
+            }
+
+            .business-card {
+                /* Ensure card dimensions are precisely 3.5 x 2 inches */
+                width: 3.5in;
+                height: 2in;
+                /* Use solid or thin gray line for crop marks */
+                border: 1px solid #999 !important; 
+                box-shadow: none !important;
+                /* Remove URL addresses in print */
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+    <!-- Load Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="print-page">
+        <div id="card-grid" class="card-container">
+            <!-- Cards will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        const cardGrid = document.getElementById('card-grid');
+        const numberOfCards = 10; // 2 wide x 5 high
+
+        // Template for a single business card's content
+        const cardContent = `
+            <div class="p-4 flex flex-col justify-between h-full">
+                <!-- Top Section: Logo and Slogan -->
+                <div class="mb-2">
+                    <h1 class="text-xl font-extrabold text-blue-800">Cmore Healthcare</h1>
+                    <p class="text-[0.6rem] italic text-gray-500 mt-0.5">Comprehensive healthcare when it counts!</p>
+                </div>
+                
+                <!-- Middle Section: Provider Name -->
+                <div class="mb-3">
+                    <h2 class="text-sm font-bold text-gray-800 leading-tight">
+                        Dale Robertson DMSc, PA-C
+                    </h2>
+                    <p class="text-[0.6rem] text-blue-600 font-semibold">
+                        Healthcare Provider
+                    </p>
+                </div>
+
+                <!-- Bottom Section: Contact Info -->
+                <div class="card-content-text space-y-[2px]">
+                    
+                    <!-- Address -->
+                    <div class="flex items-start">
+                        <!-- Icon adjusted size -->
+                        <i class="fas fa-map-marker-alt text-blue-500 mr-1 mt-[1px] text-[0.7rem]"></i>
+                        <span class="text-gray-700 leading-none">12822 SE 32nd St Suite: 216 Bellevue Wa. 98005</span>
+                    </div>
+                    
+                    <!-- Website -->
+                    <div class="flex items-center">
+                        <i class="fas fa-globe text-blue-500 mr-1 text-[0.7rem]"></i>
+                        <span class="text-blue-700 font-semibold leading-none">cmorehealthcare.com</span>
+                    </div>
+                    
+                    <!-- Phone Numbers -->
+                    <div class="flex items-center space-x-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 mr-1 text-[0.7rem]"></i>
+                            <span class="text-gray-700 leading-none">O: <span class="font-semibold">425-347-3689</span></span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-mobile-alt text-blue-500 mr-1 text-[0.7rem]"></i>
+                            <span class="text-gray-700 leading-none">C: <span class="font-semibold">206-403-0271</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Generate and append all 10 cards
+        for (let i = 0; i < numberOfCards; i++) {
+            const cardDiv = document.createElement('div');
+            cardDiv.className = 'business-card rounded-xl border-t-2 border-blue-600';
+            cardDiv.innerHTML = cardContent;
+            cardGrid.appendChild(cardDiv);
+        }
+    </script>
+
+</body>
+</html>
