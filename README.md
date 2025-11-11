@@ -165,7 +165,7 @@
                     <a href="about-uss.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">About Cmore Healthcare</span>
                     </a>
-                    <a href="#" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                    <a href="scheduling-options.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">Scheduling</span>
                     </a>
                 </div>
