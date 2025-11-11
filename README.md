@@ -38,18 +38,17 @@
             display: none; 
         }
 
-        /* NEW: Header background style with logo watermark (Adjusted to 75% width and centered) */
+        /* NEW: Header background style with logo watermark (Adjusted to 50% width and slightly tinted background) */
         .header-watermark {
-            /* Keep white background for contrast */
-            background-color: #ffffff; 
+            /* Changed to a very subtle light blue background for better contrast against the logo */
+            background-color: #f0f8ff; 
             
-            /* Only the logo image remains - no overlay */
             background-image: url('uploaded:image_15f626.png-8a0cadcb-b528-410d-a50d-44d076dcfdc8'); 
             
             background-repeat: no-repeat;
             
-            /* CRITICAL CHANGE: Set size to 75% of the container width, maintaining aspect ratio */
-            background-size: 75% auto;
+            /* CRITICAL CHANGE: Reduced size to 50% for greater color density */
+            background-size: 50% auto;
             
             /* Center the background image */
             background-position: center; 
@@ -59,8 +58,8 @@
 <body>
 
 <div class="flex-grow">
-    <!-- Header Section (Now using the custom watermark background class) -->
-    <header class="header-watermark shadow-lg p-4 sticky top-0 z-10">
+    <!-- Header Section (Increased vertical padding for better logo display area) -->
+    <header class="header-watermark shadow-lg py-6 px-4 sticky top-0 z-10">
         <div class="container mx-auto flex flex-col items-center">
             
             <!-- Top Row: Icons and Logo -->
