@@ -9,6 +9,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+        /* Custom utility for better text contrast over the background image */
+        .text-shadow-sm {
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Subtle white glow */
+        }
+
         /* Default screen styles */
         body {
             font-family: 'Inter', sans-serif;
@@ -52,7 +57,13 @@
             flex-direction: column;
             justify-content: space-between;
             background-color: #ffffff;
-            /* Corners are square for professional print */
+            
+            /* --- LOGO AS WATERMARK BACKGROUND --- */
+            background-image: url('cmore_logo image.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            /* Make it large and slightly faded for a watermark effect */
+            background-size: 150%; 
         }
         
         /* Inner content styling adjustments for smaller card size */
@@ -85,7 +96,6 @@
             }
 
             .business-card {
-                /* Ensure card dimensions are precisely 3.5 x 2 inches */
                 width: 3.5in;
                 height: 2in;
                 /* Use solid or thin gray line for crop marks */
@@ -118,27 +128,16 @@
                 
                 
                 
-                <!-- Logo now on the right -->
-                <div class="flex items-start justify-between mb-2">
-                    
-                    <!-- Title/Slogan on the left -->
-                    <div>
-                        <h1 class="text-xl font-extrabold text-blue-800 leading-tight">Cmore Healthcare</h1>
-                        <p class="text-[0.6rem] italic text-gray-500 mt-0.5 leading-none">Comprehensive healthcare when it counts!</p>
-                    </div>
-
-                    <!-- Logo on the right side using the CORRECT image file reference -->
-                    <img src="cmore_logo image.jpg" 
-                        alt="Cmore Healthcare Logo" 
-                        class="h-10 w-auto rounded-md flex-shrink-0" 
-                        onerror="this.onerror=null; this.src='https://placehold.co/60x30/003366/FFFFFF?text=Logo';"
-                    >
+                <!-- Company Title / Slogan - No separate image tag needed now -->
+                <div class="mb-2 text-shadow-sm">
+                    <h1 class="text-xl font-extrabold text-blue-900/80 leading-tight">Cmore Healthcare</h1>
+                    <p class="text-[0.6rem] italic text-gray-600/90 mt-0.5 leading-none">Comprehensive healthcare when it counts!</p>
                 </div>
                 
                 
                 
                 
-                <div class="mb-3">
+                <div class="mb-3 text-shadow-sm">
                     <h2 class="text-sm font-bold text-gray-800 leading-tight">
                         Dale Robertson DMSc, PA-C
                     </h2>
@@ -152,7 +151,7 @@
                 
                 
                 
-                <div class="card-content-text space-y-[2px]">
+                <div class="card-content-text space-y-[2px] text-shadow-sm">
                     
                     
                     
@@ -190,7 +189,7 @@
         // Generate and append all 10 cards
         for (let i = 0; i < numberOfCards; i++) {
             const cardDiv = document.createElement('div');
-            // Card design with square corners
+            // Card design with square corners and blue top border
             cardDiv.className = 'business-card border-t-2 border-blue-600'; 
             cardDiv.innerHTML = cardContent;
             cardGrid.appendChild(cardDiv);
