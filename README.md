@@ -38,17 +38,20 @@
             display: none; 
         }
 
-        /* NEW: Header background style with logo watermark (Adjusted to 50% width and slightly tinted background) */
+        /* FINAL ADJUSTMENT: Header background style with logo watermark
+           - Background color is slightly tinted blue for better contrast
+           - Size is set to a fixed 80px x 80px (h-20 w-20 equivalent) for density
+        */
         .header-watermark {
-            /* Changed to a very subtle light blue background for better contrast against the logo */
+            /* Keep subtle light blue background for better contrast against the light logo */
             background-color: #f0f8ff; 
             
             background-image: url('uploaded:image_15f626.png-8a0cadcb-b528-410d-a50d-44d076dcfdc8'); 
             
             background-repeat: no-repeat;
             
-            /* CRITICAL CHANGE: Reduced size to 50% for greater color density */
-            background-size: 50% auto;
+            /* CRITICAL CHANGE: Fixed size to match the photo (80px x 80px) for maximum visibility/density */
+            background-size: 80px 80px; 
             
             /* Center the background image */
             background-position: center; 
