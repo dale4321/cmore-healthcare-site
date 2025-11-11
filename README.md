@@ -59,14 +59,14 @@
                 <div class="flex flex-col items-center space-y-2 mb-4 md:mb-0 relative">
                     
                     <!-- 
-                        CRITICAL: Logo as an absolutely positioned, semi-transparent <img>
-                        1. SRC Attribute: This is where the image URL is located.
-                        2. ALT Attribute: This is the text you were seeing. I've updated it.
+                        *** LOGO IMAGE LOCATION ***
+                        
+                        I have changed the opacity from 'opacity-40' to 'opacity-75' to make the image much clearer.
                     -->
                     <img 
                         src="cmore_logo image.jpg" 
                         alt="Cmore Healthcare Logo" 
-                        class="absolute z-0 opacity-40" 
+                        class="absolute z-0 opacity-75" 
                         style="width: 80px; height: 80px; top: 50%; left: 50%; transform: translate(-50%, -50%);" 
                     >
 
@@ -102,7 +102,7 @@
         
         <!-- 1. HOME Page Content (Your original content) -->
         <section id="page-home" class="page-content bg-white p-8 md:p-12 rounded-xl shadow-lg border border-blue-200">
-            <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-blue-800 text-center">Welcome to Comprehensive Care</h2>
+            <h2 class="text-2xl md::text-3xl font-semibold mb-4 text-blue-800 text-center">Welcome to Comprehensive Care</h2>
             <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center">
                 Cmore Healthcare is dedicated to providing accessible, high-quality care to our patients whether in the office, via Zoom, or through in-home visits.
             </p>
