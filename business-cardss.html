@@ -28,7 +28,7 @@
         /* The simulated page container */
         .print-page {
             width: 816px;   /* 8.5 inches at 96 DPI */
-            height: 1056px; /* 11 inches at 96 DPI */
+            height: 1056px; /* 11 inches at 100 DPI */
             background: white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 1rem; /* Visual padding for screen view */
@@ -56,14 +56,20 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            background-color: #ffffff;
             
-            /* --- LOGO AS WATERMARK BACKGROUND --- */
-            background-image: url('cmore_logo image.jpg');
+            /* --- LOGO AS WATERMARK BACKGROUND (Enhanced Visibility) --- */
+            
+            /* 1. Layer the logo and a white gradient to control fading */
+            background: 
+                /* White overlay for a soft, faded effect (75% opaque white) */
+                linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                /* The logo image itself */
+                url('cmore_logo image.jpg'); 
+            
             background-repeat: no-repeat;
             background-position: center;
-            /* Make it large and slightly faded for a watermark effect */
-            background-size: 150%; 
+            /* Set size to 90% of the card to make it prominent but contained */
+            background-size: 90%; 
         }
         
         /* Inner content styling adjustments for smaller card size */
@@ -128,7 +134,7 @@
                 
                 
                 
-                <!-- Company Title / Slogan - No separate image tag needed now -->
+                <!-- Company Title / Slogan - No separate image tag needed -->
                 <div class="mb-2 text-shadow-sm">
                     <h1 class="text-xl font-extrabold text-blue-900/80 leading-tight">Cmore Healthcare</h1>
                     <p class="text-[0.6rem] italic text-gray-600/90 mt-0.5 leading-none">Comprehensive healthcare when it counts!</p>
