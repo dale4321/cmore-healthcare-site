@@ -38,15 +38,14 @@
             display: none; 
         }
 
-        /* NEW: Header background style with logo watermark */
+        /* NEW: Header background style with logo watermark (Adjusted for visibility) */
         .header-watermark {
-            /* Remove default background color */
-            background-color: transparent; 
+            /* Base color */
+            background-color: #fff; 
             
-            background: 
-                /* White overlay for contrast (85% opacity) */
-                linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-                /* The logo image itself (using the uploaded file ID) */
+            /* Define the layered background: White overlay (55% opaque) then the logo */
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
                 url('uploaded:image_15f626.png-8a0cadcb-b528-410d-a50d-44d076dcfdc8'); 
             
             background-repeat: no-repeat;
