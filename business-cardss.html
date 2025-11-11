@@ -57,18 +57,18 @@
             flex-direction: column;
             justify-content: space-between;
             
-            /* --- LOGO AS WATERMARK BACKGROUND (Now covers the entire area) --- */
+            /* --- LOGO AS WATERMARK BACKGROUND (Forced 100% Fill) --- */
             
             background: 
-                /* White overlay for a soft, faded effect (adjusted to 80% opaque white) */
-                linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+                /* White overlay for a soft, faded effect (back to 75% opaque white) */
+                linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
                 /* The logo image itself */
                 url('cmore_logo image.jpg'); 
             
             background-repeat: no-repeat;
             background-position: center;
-            /* THIS IS THE CHANGE: Ensures the image covers the entire card */
-            background-size: cover; 
+            /* THIS IS THE CRUCIAL CHANGE: Forces image to fill 100% of width and height */
+            background-size: 100% 100%; 
         }
         
         /* Inner content styling adjustments for smaller card size */
