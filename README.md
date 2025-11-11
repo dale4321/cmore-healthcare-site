@@ -159,7 +159,7 @@
                     <a href="veterans-disability.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">VA Disability assistance</span>
                     </a>
-                    <a href="business-cards.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
+                    <a href="business-cardss.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
                         <span class="text-lg font-semibold text-blue-900">Patient Pay portal</span>
                     </a>
                     <a href="about-uss.html" class="block p-4 rounded-xl shadow-md border border-green-200 bg-green-50 text-center transition transform hover:scale-[1.05] hover:shadow-lg duration-300">
