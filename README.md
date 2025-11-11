@@ -38,20 +38,21 @@
             display: none; 
         }
 
-        /* NEW: Header background style with logo watermark (Adjusted for MAX visibility) */
+        /* NEW: Header background style with logo watermark (Adjusted to 75% width and centered) */
         .header-watermark {
-            /* Revert to white base color for optimal contrast with light blue logo */
+            /* Keep white background for contrast */
             background-color: #ffffff; 
             
-            /* Define the layered background: Extremely transparent white overlay (10% opaque) then the logo */
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
-                url('uploaded:image_15f626.png-8a0cadcb-b528-410d-a50d-44d076dcfdc8'); 
+            /* Only the logo image remains - no overlay */
+            background-image: url('uploaded:image_15f626.png-8a0cadcb-b528-410d-a50d-44d076dcfdc8'); 
             
             background-repeat: no-repeat;
-            background-position: center;
-            /* Keeps the entire logo visible */
-            background-size: contain; 
+            
+            /* CRITICAL CHANGE: Set size to 75% of the container width, maintaining aspect ratio */
+            background-size: 75% auto;
+            
+            /* Center the background image */
+            background-position: center; 
         }
     </style>
 </head>
