@@ -8,18 +8,17 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
-        /* Custom utility for better text contrast over the background image */
+        /* Custom utility for better text contrast over the watermark area */
         .text-shadow-sm {
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Subtle white glow */
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); 
         }
 
         body { 
             font-family: 'Inter', sans-serif; 
-            /* Ensure the page uses flex to push footer to bottom */ 
             min-height: 100vh; 
             display: flex; 
             flex-direction: column; 
-            background-color: #f7fafc; /* Light background for contrast */ 
+            background-color: #f7fafc; 
         } 
         
         .container { 
@@ -28,7 +27,7 @@
         
         /* Style for the active navigation link */ 
         .nav-link.active { 
-            color: #1e40af; /* Tailwind blue-700 */ 
+            color: #1e40af; 
             border-bottom: 3px solid #1e40af; 
             font-weight: 700; 
         } 
@@ -38,30 +37,16 @@
             display: none; 
         }
 
-        /* FINAL ADJUSTMENT: Header background style with logo watermark
-           - Background color is slightly tinted blue for better contrast
-           - Size is set to a fixed 80px x 80px (h-20 w-20 equivalent) for density
-        */
+        /* Header background is now a uniform light color */
         .header-watermark {
-            /* Keep subtle light blue background for better contrast against the light logo */
-            background-color: #f0f8ff; 
-            
-            background-image: url('uploaded:image_15f626.png-8a0cadcb-b528-410d-a50d-44d076dcfdc8'); 
-            
-            background-repeat: no-repeat;
-            
-            /* CRITICAL CHANGE: Fixed size to match the photo (80px x 80px) for maximum visibility/density */
-            background-size: 80px 80px; 
-            
-            /* Center the background image */
-            background-position: center; 
+            background-color: #f0f8ff; /* Subtle light blue tint */ 
         }
     </style>
 </head>
 <body>
 
 <div class="flex-grow">
-    <!-- Header Section (Increased vertical padding for better logo display area) -->
+    <!-- Header Section -->
     <header class="header-watermark shadow-lg py-6 px-4 sticky top-0 z-10">
         <div class="container mx-auto flex flex-col items-center">
             
@@ -70,13 +55,22 @@
                 <!-- Left: Asclepius Symbol -->
                 <div class="text-blue-900 text-5xl mr-5 text-shadow-sm">&#9764;</div>
 
-                <!-- Center: Logo/Heading (Simplified to text, relying on CSS for background logo) -->
-                <div class="flex flex-col items-center space-y-2 mb-4 md:mb-0">
-                    <!-- Title Text sits on top of the logo background -->
-                    <h1 class="text-4xl md:text-4xl font-black text-blue-900 text-center leading-tight text-shadow-sm">
+                <!-- Center: Logo/Heading (Now uses an absolutely positioned <img> element for the watermark) -->
+                <div class="flex flex-col items-center space-y-2 mb-4 md:mb-0 relative">
+                    
+                    <!-- CRITICAL CHANGE: Logo as an absolutely positioned, semi-transparent <img> -->
+                    <img 
+                        src="uploaded:image_15f626.png-8a0cadcb-b528-410d-a50d-44d076dcfdc8" 
+                        alt="Cmore Logo Watermark" 
+                        class="absolute z-0 opacity-40" 
+                        style="width: 80px; height: 80px; top: 50%; left: 50%; transform: translate(-50%, -50%);" 
+                    >
+
+                    <!-- Title Text sits on top of the logo image (z-10) -->
+                    <h1 class="text-4xl md:text-4xl font-black text-blue-900 text-center leading-tight text-shadow-sm relative z-10">
                         Cmore Healthcare
                     </h1>
-                    <p class="text-sm text-gray-700 italic text-shadow-sm">Comprehensive healthcare when it counts!</p>
+                    <p class="text-sm text-gray-700 italic text-shadow-sm relative z-10">Comprehensive healthcare when it counts!</p>
                 </div>
 
                 <!-- Right: Photo Placeholder -->
@@ -85,7 +79,7 @@
                         src="cmore_website photo .png" 
                         alt="African American Doctor treating elderly patient" 
                         class="h-20 w-20 rounded-full shadow-lg"
-                        onerror="this.onerror=null; this.src='https://placehold.co/40x40/CCCCCC/333333?text=Photo';"
+                        onerror="this.onerror=null; this.src='https://placehold.co/80x80/CCCCCC/333333?text=Photo';"
                     >
                 </div>
             </div>
