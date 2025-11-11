@@ -66,7 +66,7 @@
                     <img 
                         src="cmore_logo image.jpg" 
                         alt="Cmore Healthcare Logo" 
-                        class="absolute z-0 opacity-75" 
+                        class="absolute z-0 opacity-99" 
                         style="width: 80px; height: 80px; top: 50%; left: 50%; transform: translate(-50%, -50%);" 
                     >
 
