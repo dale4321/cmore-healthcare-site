@@ -130,7 +130,7 @@
                     <div class="space-y-2">
                         <h3 class="font-bold text-xl text-blue-700">Phone & Appointments</h3>
                         <p class="text-gray-700">
-                            <span class="font-semibold">Main Office:</span> <a href="tel:+1-425-347-3689" class="text-blue-600 hover:text-blue-800 underline block">(425) 347-3689</a>
+                            <span class="font-semibold">Main Office:</span> <a href="tel:+1-425-429-7517" class="text-blue-600 hover:text-blue-800 underline block">(425) 347-3689</a>
                             <span class="text-sm text-gray-500 block">Call during business hours for appointments.</span>
                         </p>
                     </div>
