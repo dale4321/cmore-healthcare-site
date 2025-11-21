@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cmore Healthcare - Patient Pay Portal</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         /* Custom font and basic styling */
@@ -20,7 +18,6 @@
 </head>
 <body class="p-4 md:p-8 flex justify-center items-start">
 
-    <!-- Main Content Container (Large Card) -->
     <div class="w-full max-w-4xl bg-white p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-blue-600 transition-all duration-300">
         
         <header class="text-center mb-12">
@@ -28,67 +25,62 @@
                 Patient Pay Portal
             </h1>
             <p class="text-xl text-gray-600">
-                Secure and simple payment options are on the way.
+                Securely pay your healthcare bills online.
             </p>
         </header>
 
-        <!-- --- Section 1: Convenient Pay Option coming soon. --- -->
-        <div class="mb-16 border-b pb-12 border-gray-200">
+        <div class="mb-16">
             <h2 class="text-3xl font-bold text-blue-800 mb-8 border-l-4 border-blue-500 pl-4">
-                Convenient Pay Option coming soon.
+                Enter Payment Details
             </h2>
 
-            <div class="flex flex-col lg:flex-row items-center gap-8">
+            <form action="YOUR_PAYMENT_GATEWAY_URL" method="POST" class="space-y-6">
                 
-                <!-- Image Placeholder -->
-                <div class="flex-shrink-0 w-48 h-48 rounded-lg overflow-hidden shadow-lg bg-gray-100 border-4 border-blue-500 lg:order-2 lg:ml-8">
-                    <!-- Placeholder using a clean image URL with a payment icon -->
-                    <img src="https://placehold.co/400x400/3b82f6/FFFFFF?text=Secure+Payments" 
-                         alt="Secure Online Payments" 
-                         class="object-cover w-full h-full">
+                <input type="hidden" name="x_api_id" value="26NJt4Rq3Q">
+                <input type="hidden" name="x_transaction_key" value="4H4h54RAy4xTd96c">
+                <input type="hidden" name="x_signature" value="94818574">
+
+                <div>
+                    <label for="invoice_number" class="block text-lg font-medium text-gray-700 mb-2">
+                        Account or Invoice Number
+                    </label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <input type="text" name="invoice_number" id="invoice_number" required
+                               class="block w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 text-lg"
+                               placeholder="e.g., 12345678"
+                               aria-describedby="invoice-number-description">
+                    </div>
+                    <p class="mt-2 text-sm text-gray-500" id="invoice-number-description">
+                        Please enter the account or invoice number found on your statement.
+                    </p>
                 </div>
 
-                <!-- Explanatory Text -->
-                <div class="text-lg text-gray-700 space-y-4 lg:order-1">
-                    <p>
-                        We are excited to be developing a secure, easy-to-use online payment portal for your convenience. 
-                    </p>
-                    <p>
-                        Our goal is to make managing your healthcare expenses as simple and straightforward as possible. This new feature will allow you to view statements and pay your bills online, anytime, from any device.
-                    </p>
+                <div>
+                    <label for="amount" class="block text-lg font-medium text-gray-700 mb-2">
+                        Payment Amount
+                    </label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <span class="text-gray-500 text-xl font-semibold">$</span>
+                        </div>
+                        <input type="number" name="x_amount" id="amount" required step="0.01" min="0.01"
+                               class="block w-full pl-8 pr-4 py-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 text-lg"
+                               placeholder="0.00"
+                               aria-describedby="amount-description">
+                    </div>
                 </div>
-            </div>
+
+                <div class="pt-4">
+                    <button type="submit"
+                            class="w-full flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-xl font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                        <i class="fas fa-lock mr-3"></i> 
+                        Proceed to Secure Payment
+                    </button>
+                </div>
+
+            </form>
         </div>
-
-        <!-- --- Section 2: Under Construction --- -->
-        <div class="mb-10">
-            <h2 class="text-3xl font-bold text-yellow-700 mb-8 border-l-4 border-yellow-500 pl-4">
-                Under Construction
-            </h2>
-
-            <div class="flex flex-col lg:flex-row items-center gap-8">
-                
-                <!-- Image Placeholder -->
-                <div class="flex-shrink-0 w-48 h-48 rounded-lg overflow-hidden shadow-lg bg-gray-100 border-4 border-yellow-500">
-                    <!-- Placeholder using a clean image URL with a construction icon -->
-                    <img src="https://placehold.co/400x400/f59e0b/FFFFFF?text=Coming+Soon" 
-                         alt="Page Under Construction" 
-                         class="object-cover w-full h-full">
-                </div>
-
-                <!-- Explanatory Text -->
-                <div class="text-lg text-gray-700 space-y-4">
-                    <p>
-                        Our development team is currently hard at work building this feature. We are conducting thorough testing to ensure the highest standards of security and reliability for your financial information.
-                    </p>
-                    <p>
-                        Thank you for your patience as we work to improve your experience. Please check back soon for updates!
-                    </p>
-                </div>
-            </div>
         </div>
-
-    </div>
 
 </body>
 </html>
